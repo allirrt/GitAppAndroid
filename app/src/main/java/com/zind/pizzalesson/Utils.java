@@ -95,7 +95,7 @@ public class Utils {
     public static final String GIT_16_RECIPE = " Чтобы удалять файлы, которые не находятся под контролем версий используйте git clean, но прежде чем что-то удалять запустите команду с флагом -n чтобы узнать что будет удалено.";
 
     public static final String GIT_17_TITLE = "Просмотор последнего коммита";
-    public static final String GIT_17_DESCRIPTION = "Команда для посмотра последний коммитов на каждой из веток...";
+    public static final String GIT_17_DESCRIPTION = "Команда для посмотра последних коммитов на каждой из веток...";
     public static final String GIT_17_RECIPE = " Чтобы посмотреть последний коммит на каждой из веток, выполните команду git branch -v.";
 
     public static final String GIT_18_TITLE = "Удаление ветки";
