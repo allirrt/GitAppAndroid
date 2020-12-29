@@ -4,22 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    app:cardCornerRadius="5dp">
+    android:layout_margin="6dp"
+    app:cardCornerRadius="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <ImageView
+
+        <TextView
             android:id="@+id/gitImageView"
             android:layout_width="0dp"
-            android:layout_height="85dp"
-            android:padding="3dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/my_grey"
+            android:fontFamily="@font/allerta"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Image"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleTextView"
             tools:ignore="MissingConstraints" />
@@ -29,13 +40,17 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="4dp"
-            android:layout_toEndOf="@+id/gitImageView"
+
             android:background="#2703D3DA"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
             android:text="Title"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
@@ -46,8 +61,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="6dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="4dp"
+
+            android:background="#FDFAFA"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="8dp"
             android:text="Description"
             android:textSize="15sp"
             android:textStyle="italic"

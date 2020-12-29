@@ -1,6 +1,7 @@
 package com.zind.pizzalesson;
 
-public class Utils {
+public class Utils<name> {
+    public static final String GIT_1_VIEW = "git init";
     public static final String GIT_1_TITLE = "Инициализация нового репозитория";
     public static final String GIT_1_DESCRIPTION = "Для создания нового репозитория используется команда git init. ";
     public static final String GIT_1_RECIPE = "Для создания нового репозитория используется команда git init. " + "\n"+
@@ -8,14 +9,17 @@ public class Utils {
             "Выполнение команды приведет к созданию нового подкаталога .git в вашем рабочем каталоге.  " +"\n"+
             "Кроме того, будет создана новая главная ветка.";
 
+    public static final String GIT_2_VIEW = "git clone <url>";
     public static final String GIT_2_TITLE = "Клонирование репозитория";
     public static final String GIT_2_DESCRIPTION = "Создание копии существующего Git-репозитория...";
     public static final String GIT_2_RECIPE = "Эта команда создаёт директорию, инициализирует в ней поддиректорию .git, скачивает все данные для этого репозитория и извлекает рабочую копию последней клонируемой версии.";
 
+    public static final String GIT_3_VIEW = "git config --list";
     public static final String GIT_3_TITLE = "Конфигурация";
     public static final String GIT_3_DESCRIPTION = "Вывод списка всех установленных настроек...";
     public static final String GIT_3_RECIPE = "Команда git config --list выведет все поля и их значения из конфигурационного файла.";
 
+    public static final String GIT_4_VIEW = "git config user.name Jack Sparrow";
     public static final String GIT_4_TITLE = "Задать имя для своих репозиториев";
     public static final String GIT_4_DESCRIPTION = "После установки Git — нужно указать имя и адрес электронной почты...";
     public static final String GIT_4_RECIPE = "Первое, что следует сделать после установки Git — указать имя и адрес электронной почты. Это важно, потому что каждый коммит в Git содержит эту информацию, и она включена в коммиты, передаваемые вами, и не может быть далее изменена:\n" +
@@ -24,6 +28,8 @@ public class Utils {
             "$ git config --global user.email your@mail.com\n" +
             "\n"+ "Опять же, если указана опция --global, то эти настройки достаточно сделать только один раз, поскольку в этом случае Git будет использовать эти данные для всего, что вы делаете в этой системе. Если для каких-то отдельных проектов вы хотите указать другое имя или электронную почту, можно выполнить эту же команду без параметра --global в каталоге с нужным проектом.";
 
+
+    public static final String GIT_5_VIEW = "git config user.email your@mail.com";
     public static final String GIT_5_TITLE = "Задать Email для своих репозиториев";
     public static final String GIT_5_DESCRIPTION = "После установки Git — нужно указать имя и адрес электронной почты...";
     public static final String GIT_5_RECIPE = "Первое, что следует сделать после установки Git — указать имя и адрес электронной почты. Это важно, потому что каждый коммит в Git содержит эту информацию, и она включена в коммиты, передаваемые вами, и не может быть далее изменена:\n" +
@@ -32,21 +38,28 @@ public class Utils {
             "$ git config --global user.email your@mail.com\n" +
             "\n"+ "Опять же, если указана опция --global, то эти настройки достаточно сделать только один раз, поскольку в этом случае Git будет использовать эти данные для всего, что вы делаете в этой системе. Если для каких-то отдельных проектов вы хотите указать другое имя или электронную почту, можно выполнить эту же команду без параметра --global в каталоге с нужным проектом.";
 
+
+    public static final String GIT_6_VIEW = "git status";
     public static final String GIT_6_TITLE = "Статус файлов";
     public static final String GIT_6_DESCRIPTION = "Демонстрация состояния файлов в рабочей директории и индексе...";
     public static final String GIT_6_RECIPE = "Команда git status показывает состояния файлов в рабочей директории и индексе, какие файлы изменены, но не добавлены в индекс, какие ожидают коммита в индексе. " +
             "\n"+  "Вдобавок к этому выводятся подсказки о том, как изменить состояние файлов.";
 
+
+    public static final String GIT_7_VIEW = "git add <Имя файла>";
     public static final String GIT_7_TITLE = "Добавление файла";
     public static final String GIT_7_DESCRIPTION = "Добавление содержимого рабочей директории в индекс для последующего коммита...";
     public static final String GIT_7_RECIPE = " Команда git add добавляет содержимое рабочей директории в индекс (staging area) для последующего коммита. " +
             "\n"+ "По умолчанию git commit использует лишь этот индекс, так что вы можете использовать git add для сборки слепка вашего следующего коммита.";
 
+
+    public static final String GIT_8_VIEW = "git reset -- <Имя файла>";
     public static final String GIT_8_TITLE = "Отмена изменений";
     public static final String GIT_8_DESCRIPTION = "Используется для отмены сделанных изменений...";
     public static final String GIT_8_RECIPE = " Команда git reset используется в основном для отмены изменений. Она изменяет указатель HEAD и, опционально, состояние индекса. " +
             "\n"+"Также эта команда может изменить файлы в рабочей директории при использовании параметра --hard, что может привести к потере наработок при неправильном использовании, так что убедитесь в серьёзности своих намерений прежде чем использовать его.";
 
+    public static final String GIT_9_VIEW = "git checkout -- <Имя файла>";
     public static final String GIT_9_TITLE = "Перемещение между ветками";
     public static final String GIT_9_DESCRIPTION = "Команда git checkout позволяет перемещаться между ветками, созданными командой git branch...";
     public static final String GIT_9_RECIPE = " Команда git checkout позволяет перемещаться между ветками, созданными командой git branch. При переключении ветки происходит обновление файлов в рабочем каталоге в соответствии с версией, хранящейся в этой ветке, а Git начинает записывать все новые коммиты в этой ветке. Рассматривайте эту команду как способ выбрать направление для развития в рамках своей разработки.\n" +
@@ -56,10 +69,12 @@ public class Utils {
             "Иногда команду git checkout можно спутать с командой git clone. Разница между этими двумя командами заключается в том, что при клонировании (clone) выполняется извлечение кода из удаленного репозитория, тогда как при переключении (checkout) происходит переключение между версиями кода, который уже находится в локальной системе. " +
             "\n"+ "Также git checkout отменяет изменения файла, достаточно прописать git checkout <Имя файла> и он будет возвращен в первичное состояние коммита";
 
+    public static final String GIT_10_VIEW = "git rm <Имя файла>";
     public static final String GIT_10_TITLE = "Удаление файлов из индекса и рабочей директории";
     public static final String GIT_10_DESCRIPTION = "Команда похожа на git add с тем лишь исключением, что она удаляет, а не добавляет файлы для следующего коммита...";
     public static final String GIT_10_RECIPE = " Команда git rm используется в Git для удаления файлов из индекса и рабочей директории. Она похожа на git add с тем лишь исключением, что она удаляет, а не добавляет файлы для следующего коммита.";
 
+    public static final String GIT_11_VIEW = "git commit -m [Сообщение]";
     public static final String GIT_11_TITLE = "Добавление данных";
     public static final String GIT_11_DESCRIPTION = "Команда git commit берёт все данные, добавленные в индекс с помощью git add...";
     public static final String GIT_11_RECIPE = "Команда git commit делает для проекта снимок текущего состояния изменений, которые были добавлены в раздел проиндексированных файлов. " +
@@ -67,6 +82,7 @@ public class Utils {
             "\n" +"Перед выполнением команды git commit необходимо использовать команду git add, чтобы добавить («проиндексировать») в проект изменения, которые будут сохранены в коммите. " +
             "\n" +"Эти две команды, git commit и git add, используются чаще всего.";
 
+    public static final String GIT_12_VIEW = "git commit --amend";
     public static final String GIT_12_TITLE = "Объединение проиндексированных изменений";
     public static final String GIT_12_DESCRIPTION = "Удобный способ изменить последний коммит...";
     public static final String GIT_12_RECIPE = " Команда git commit --amend — это удобный способ изменить последний коммит." +
@@ -75,47 +91,56 @@ public class Utils {
             "\n" +"Но такое изменение приводит не только к редактированию последнего коммита, но и к его полной замене. " +
             "\n" +"Это означает, что измененный коммит станет новой сущностью с отдельной ссылкой.";
 
+    public static final String GIT_13_VIEW = "git log";
     public static final String GIT_13_TITLE = "Просмотр истории коммитов";
     public static final String GIT_13_DESCRIPTION = "По умолчанию, без аргументов, git log выводит список коммитов созданных в...";
     public static final String GIT_13_RECIPE = " Команда git log используется для просмотра истории коммитов, начиная с самого свежего и уходя к истокам проекта. " +
             "\n" +"По умолчанию, она показывает лишь историю текущей ветки, но может быть настроена на вывод истории других, даже нескольких сразу, веток. " +
             "\n" +"Также её можно использовать для просмотра различий между ветками на уровне коммитов.";
 
+    public static final String GIT_14_VIEW = "git shortlog";
     public static final String GIT_14_TITLE = "Демонстрация информации находящейся в ветке";
     public static final String GIT_14_DESCRIPTION = "Чтобы показать всех пользователей, электронные письма, количество коммитов в...";
     public static final String GIT_14_RECIPE = " Команда git shortlog служит для подведения итогов команды git log. Она принимает практически те же параметры, что и git log, но вместо простого листинга всех коммитов, они будут сгруппированы по автору.";
 
+    public static final String GIT_15_VIEW = "git diff";
     public static final String GIT_15_TITLE = "Сравнение источников данных";
     public static final String GIT_15_DESCRIPTION = "Команда, которая инициирует функцию сравнения источников данных Git.";
     public static final String GIT_15_RECIPE = " Представляет собой многоцелевую команду Git, которая инициирует функцию сравнения источников данных Git... " +
             "\n" +"Зачастую вместе с командой git diff используются git status и git log для анализа текущего состояния репозитория Git.";
 
+    public static final String GIT_16_VIEW = "git clean -n";
     public static final String GIT_16_TITLE = "Узнать какие файлы будут удалены";
     public static final String GIT_16_DESCRIPTION = "Прежде чем что-то удалять запустите команду с флагом -n чтобы узнать, что будет удалено...";
     public static final String GIT_16_RECIPE = " Чтобы удалять файлы, которые не находятся под контролем версий используйте git clean, но прежде чем что-то удалять запустите команду с флагом -n чтобы узнать что будет удалено.";
 
+    public static final String GIT_17_VIEW = "git branch -v";
     public static final String GIT_17_TITLE = "Просмотор последнего коммита";
     public static final String GIT_17_DESCRIPTION = "Команда для посмотра последних коммитов на каждой из веток...";
-    public static final String GIT_17_RECIPE = " Чтобы посмотреть последний коммит на каждой из веток, выполните команду git branch -v.";
+    public static final String GIT_17_RECIPE = " Чтобы посмотреть последний коммит на каждой из веток, выполните команду git branch -v";
 
+    public static final String GIT_18_VIEW = "git branch -d [Имя ветки]";
     public static final String GIT_18_TITLE = "Удаление ветки";
     public static final String GIT_18_DESCRIPTION = "Сначала мы перемещаемся в главную ветку и уже оттуда удаляем только что созданную...";
     public static final String GIT_18_RECIPE = " Если мы хотим удалить ветку из Git, мы можем сделать это с помощью следующей команды:\n" +
             "\n" + "git branch -d [branch_name]\n" +
             "Однако, мы не можем находиться в той ветке, которую хотим удалить. Сначала мы перемещаемся в главную ветку и уже оттуда удаляем только что созданную.";
 
+    public static final String GIT_19_VIEW = "git merge";
     public static final String GIT_19_TITLE = "Объединение ветвлений";
     public static final String GIT_19_DESCRIPTION = "Команда git merge отвечает за объединение ветвлений в истории Git...";
     public static final String GIT_19_RECIPE = " Команда git merge отвечает за объединение ветвлений в истории Git и позволяет выполнять слияние отдельных процессов разработки, созданных с помощью команды git branch, в единую ветку.\n" +
             "\n" +
             "git merge часто используется в сочетании с командами git checkout (выбор текущей ветки) и git branch -d (удаление целевой устаревшей ветки).";
 
+    public static final String GIT_20_VIEW = "git rebase";
     public static final String GIT_20_TITLE = "Изменение комитов и их перемещение";
     public static final String GIT_20_DESCRIPTION = "Git rebase копирует коммиты из текущей ветки и помещает эти скопированные коммиты поверх указанной ветки...";
     public static final String GIT_20_RECIPE = " С помощью команды rebase вы можете взять все коммиты из одной ветки и в том же порядке применить их к другой ветке. " +
             "\n" + "Перед rebase коммитов можно их изменить! Сделать это с помощью Interactive Rebase. " +
             "\n" +"Interactive Rebase также может быть полезен для ветки, над которой вы сейчас работаете, и хотите изменить некоторые коммиты.";
 
+    public static final String GIT_21_VIEW = "git tag";
     public static final String GIT_21_TITLE = "Посмотр имеющихся тегов";
     public static final String GIT_21_DESCRIPTION = "Список сохраненных в репозитории тегов...";
     public static final String GIT_21_RECIPE = " Просмотреть список имеющихся тегов в Git можно очень просто. " +"Достаточно набрать команду git tag (параметры -l и --list опциональны)"+
@@ -123,6 +148,7 @@ public class Utils {
             "\n" + "Чтобы уточнить список тегов, можно передать параметр -l и выражение с подстановочными знаками:\n" +
            " \n" + "$ git tag -l *-rc* v0.10.0-rc1 v0.11.0-rc1 v0.12.0-rc1. ";
 
+    public static final String GIT_22_VIEW = "git stash";
     public static final String GIT_22_TITLE = "Сохранить изменения";
     public static final String GIT_22_DESCRIPTION = "Поместить текущие изменения в файлах, в отдельное хранилище...";
     public static final String GIT_22_RECIPE = " Команда git stash предназначена для того, чтобы поместить текущие изменения, которые вы выполнили в файлах, в отдельное хранилище, и вернуть файлы к исходному состоянию. " +
@@ -137,6 +163,7 @@ public class Utils {
             "\n" +"Вы также можете применить изменения к рабочей копии без удаления из набора отложенных изменений. Для этого воспользуйтесь командой git stash apply." +
             "\n" +" Команду git stash можно выполнить несколько раз, после чего у вас будет возможность просмотреть список наборов с помощью команды git stash list.";;
 
+    public static final String GIT_23_VIEW = "git remote";
     public static final String GIT_23_TITLE = "Просмотр адресов для чтения и записи, привязанных к репозиторию";
     public static final String GIT_23_DESCRIPTION = "Для того, чтобы просмотреть список настроенных удалённых репозиториев...";
     public static final String GIT_23_RECIPE = " Для того, чтобы просмотреть список настроенных удалённых репозиториев, нужно запустить команду git remote. " +
@@ -145,6 +172,7 @@ public class Utils {
             "\n"+"Можно также указать ключ -v, чтобы просмотреть адреса для чтения и записи, привязанные к репозиторию:\n" +
             "\n" + "Добавить удалённый репозиторий и присвоить ему имя (shortname), выполнить команду git remote add <shortname> <url>.";
 
+    public static final String GIT_24_VIEW = "git push";
     public static final String GIT_24_TITLE = "Выгрузка локального репозитория";
     public static final String GIT_24_DESCRIPTION = "Используется для выгрузки содержимого локального репозитория в удаленный репозиторий...";
     public static final String GIT_24_RECIPE = "Команда git push используется для выгрузки содержимого локального репозитория в удаленный репозиторий. " +
@@ -152,21 +180,26 @@ public class Utils {
             "Эта команда симметрична команде git fetch: при извлечении с помощью fetch коммиты импортируются в локальные ветки, а при публикации с помощью push коммиты экспортируются в удаленные ветки. Настроить удаленные ветки можно с помощью команды git remote. " +
             "Команда push может перезаписать изменения, поэтому при ее использовании следует соблюдать осторожность.";
 
+    public static final String GIT_25_VIEW = "git fetch";
     public static final String GIT_25_TITLE = "Получение данных из удалённых проектов";
     public static final String GIT_25_DESCRIPTION = "Команда git fetch получает изменения с сервера и сохраняет их в каталог refs/remotes/...";
     public static final String GIT_25_RECIPE = "Команда git fetch получает изменения с сервера и сохраняет их в каталог refs/remotes/. " +
             "Это действие (fetch) не влияет на локальные ветки и текущие изменения, просто изменения с удаленного сервера скачиваются в директорию локального репозитария. ";
 
+    public static final String GIT_26_VIEW = "git pull";
     public static final String GIT_26_TITLE = "Вливание изменений из удаленного репозитория ";
     public static final String GIT_26_DESCRIPTION = "Команда pull забирает изменения из удаленного репозитория и интегрирует их с изменениями в локальном репозитории...";
     public static final String GIT_26_RECIPE = "Команда pull используется для объединения изменений, присутствующих в удаленном репозитории, в локальный рабочий каталог.";
 
+
+    public static final String GIT_27_VIEW = "git gc";
     public static final String GIT_27_TITLE = "Сборщик мусора в репозитории";
     public static final String GIT_27_DESCRIPTION = "Удаление ненужных файлов из хранилища объектов...";
     public static final String GIT_27_RECIPE = " Команда git gc запускает сборщик мусора в вашем репозитории, который удаляет ненужные файлы из хранилища объектов и эффективно упаковывает оставшиеся файлы.\n" +
             "\n" +
             "Обычно, эта команда выполняется автоматически без вашего участия, но, если пожелаете, можете вызвать её вручную.";
 
+    public static final String GIT_28_VIEW = "git fsck";
     public static final String GIT_28_TITLE = "Тестирование репозитория";
     public static final String GIT_28_DESCRIPTION = "Запускает ряд логических самопроверок репозитория, и создаёт отчёт о всех имеющихся проблемах.";
     public static final String GIT_28_RECIPE = "Команда git fsck используется для проверки внутренней базы данных на предмет наличия ошибок и несоответствий."+

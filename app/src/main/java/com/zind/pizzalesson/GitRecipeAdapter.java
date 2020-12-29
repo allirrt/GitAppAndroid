@@ -35,9 +35,10 @@ public class GitRecipeAdapter extends RecyclerView.Adapter<GitRecipeAdapter.GitR
     public void onBindViewHolder(@NonNull GitRecipeViewHolder viewHolder, int position) {
           GitRecipeItem pizzaRecipeItem = gitRecipeItems.get(position);
 
-          viewHolder.gitImageView.setImageResource(pizzaRecipeItem.getImageResource());
+         // viewHolder.gitImageView.setImageResource(pizzaRecipeItem.getImageResource());
           viewHolder.title.setText(pizzaRecipeItem.getTitle());
           viewHolder.description.setText(pizzaRecipeItem.getDescription());
+          viewHolder.gitImageView.setText(pizzaRecipeItem.getImageResource());
     }
     @Override
     public int getItemCount() {
@@ -46,7 +47,7 @@ public class GitRecipeAdapter extends RecyclerView.Adapter<GitRecipeAdapter.GitR
 
     class GitRecipeViewHolder extends RecyclerView.ViewHolder implements
             View.OnClickListener {
-        public ImageView gitImageView;
+        public TextView gitImageView;
         public TextView title;
         public TextView description;
 
